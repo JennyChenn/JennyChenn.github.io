@@ -26,7 +26,7 @@
 
 <section id="resume">
     <h2>Resume</h2>
-    <p>You can <a href="https://docs.google.com/document/d/1b_L7cd2xogikAbIT9py6SDUgYkY1VsBq/edit?usp=sharing&ouid=102581431009070678054&rtpof=true&sd=true">view or download my resume here</a>.</p>
+    <p>You can <a href="https://docs.google.com/document/d/1b_L7cd2xogikAbIT9py6SDUgYkY1VsBq/edit?usp=sharing&ouid=102581431009070678054&rtpof=true&sd=true" target="_blank">view or download my resume here</a>.</p>
 </section>
 
 <section id="experience">
@@ -38,6 +38,20 @@
         <li><strong>M&A Projects</strong>: Built models for streamlining processes and saving operational fees.</li>
     </ul>
 </section>
+
+<!-- JavaScript for the lights effect -->
+<script>
+    document.addEventListener('mousemove', function(e) {
+        let light = document.querySelector('.light');
+        light.style.left = e.pageX + 'px';
+        light.style.top = e.pageY + 'px';
+    });
+
+    // Create and append the light element
+    let lightElement = document.createElement('div');
+    lightElement.classList.add('light');
+    document.body.appendChild(lightElement);
+</script>
 
 </body>
 </html>
