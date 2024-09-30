@@ -66,3 +66,24 @@ body::before {
         flex-direction: column;
     }
 }
+/* Light effect that follows the mouse */
+.light {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: screen;
+    animation: moveLights 5s infinite;
+}
+
+@keyframes moveLights {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
