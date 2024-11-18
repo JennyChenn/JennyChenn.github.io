@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenny Chen's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header id="main-header">
+<header>
     <h1>Jenny Chen</h1>
     <p>Software Engineer | Data Analyst | AI Enthusiast</p>
 </header>
@@ -17,46 +17,58 @@
 <nav>
     <a href="#about">About Me</a>
     <a href="#resume">Resume</a>
-    <a href="#experience">Experience</a>
+    <a href="#experience">Past Experience</a>
 </nav>
 
 <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I’m Jenny, a senior at Cornell University studying Computer Science and Business. I’m passionate about AI, robotics, and solving large-scale technical challenges. I’ve developed AI-driven solutions, trained machine learning models, and contributed to impactful projects during my internships and coursework.</p>
+    <p>Jenny Chen is a rising Senior at Cornell University studying Computer Science and Business, where she balances her studies with active involvement in Women in Computer Science and previous involvement with NCAA Division I Women's Equestrian Team. With a keen interest in artificial intelligence, program management, and data analytics, she has developed AI-driven solutions and data management systems that streamline processes and enhance efficiency across various projects such as building a GenAI ChatBot during her internship. Her role as a Senior Consultant at Illinois Business Consulting showcased her ability to lead projects and teams, driving significant technology transformations.</p>
+    <p>Jenny previously earned National Championships in swimming in 2014 and in the Modern Pentathlon Mixed Medley Relay in 2015. Her career is marked by a consistent dedication and strategic approach, which she continues to apply across her professional endeavors.</p>
+    <div class="contact-buttons">
+        <a href="https://www.linkedin.com/in/jenny-chen-10754021a/" target="_blank" class="button">LinkedIn</a>
+        <a href="mailto:wc557@cornell.edu" class="button">Email Me</a>
+    </div>
 </section>
 
 <section id="resume">
     <h2>Resume</h2>
-    <iframe src="https://docs.google.com/document/d/1b_L7cd2xogikAbIT9py6SDUgYkY1VsBq/export?format=pdf&ouid=102581431009070678054&rtpof=true&sd=true" width="100%" height="600px">
-        This browser does not support PDFs. Please <a href="https://docs.google.com/document/d/1b_L7cd2xogikAbIT9py6SDUgYkY1VsBq/export?format=pdf&ouid=102581431009070678054&rtpof=true&sd=true" target="_blank">download the PDF</a> to view it.
+    <iframe src="/mnt/data/Jenny_Chen_Software_Engineer.pdf" width="100%" height="600px">
+        This browser does not support PDFs. Please <a href="/mnt/data/Jenny_Chen_Software_Engineer.pdf" target="_blank">download the PDF</a> to view it.
     </iframe>
 </section>
 
 <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-        <li><strong>AI Chatbot Development (Internship)</strong>: Built a GenAI ChatBot, improving response accuracy and reducing costs.</li>
-        <li><strong>Cornell University (Robotics TA)</strong>: Supported interdisciplinary robotics courses covering kinematics, motion planning, and control systems.</li>
-        <li><strong>M&A Projects</strong>: Built models for streamlining processes and saving operational fees.</li>
-    </ul>
+    <h2>Past Experience</h2>
+    <div class="experience-container">
+        <div class="experience-card">
+            <h3>Reaction Time Machine</h3>
+            <p>Languages Used: JavaScript, HTML, CSS</p>
+            <a href="https://github.coecis.cornell.edu/ece3140-sp2024/jwr257-vv228-wc557" target="_blank" class="button">View Project</a>
+        </div>
+        <div class="experience-card">
+            <h3>Trained T4 Model for Addition</h3>
+            <p>Languages Used: Python</p>
+            <a href="https://github.com/aad235/CS4782-Final-Project-LLMs-and-Arithmetic" target="_blank" class="button">View Project</a>
+        </div>
+        <div class="experience-card">
+            <h3>GenAI Chatbot</h3>
+            <p>Languages Used: Python, Angular, Flask</p>
+            <!-- No link provided as per your request -->
+        </div>
+    </div>
 </section>
 
-<!-- JavaScript for light effect and header navigation -->
 <script>
-    // Light effect
+    // Light effect - Add if needed for additional interactivity
     document.addEventListener('mousemove', function(e) {
         let light = document.querySelector('.light');
-        light.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
-    });
-
-    // Create and append the light element
-    let lightElement = document.createElement('div');
-    lightElement.classList.add('light');
-    document.body.appendChild(lightElement);
-
-    // Header click behavior for changing pages
-    document.getElementById('main-header').addEventListener('click', function() {
-        window.location.href = 'anotherPage.html'; // Replace with the actual page URL you want to navigate to
+        if (!light) {
+            light = document.createElement('div');
+            light.classList.add('light');
+            document.body.appendChild(light);
+        }
+        light.style.left = e.pageX + 'px';
+        light.style.top = e.pageY + 'px';
     });
 </script>
 
