@@ -1,94 +1,3 @@
-/* body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #f1f1f1; /* Light text for contrast */
-}
-
-/* Header Styling */
-header {
-    background-color: #1e1e1e;
-    padding: 10px;
-    text-align: center;
-    color: white;
-    box-shadow: 0px 4px 2px -2px gray;
-}
-
-/* Navigation Bar Styling */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-}
-
-nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    font-size: 18px;
-}
-
-nav a:hover {
-    background-color: #575757;
-}
-
-/* Section Styling */
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #1e1e1e; /* Dark section background */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-h2 {
-    color: #4CAF50; /* Green accent for headers */
-}
-
-/* Interactive Background */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle, rgba(58,58,58,1) 0%, rgba(0,0,0,1) 100%);
-    z-index: -1;
-    opacity: 0.8;
-}
-
-/* Media Query for Responsiveness */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-}
-/* Light effect that follows the mouse */
-.light {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-    pointer-events: none;
-    z-index: 1;
-    mix-blend-mode: screen;
-    animation: moveLights 5s infinite;
-}
-
-@keyframes moveLights {
-    from {
-        transform: scale(0.8);
-    }
-    to {
-        transform: scale(1.2);
-    }
-}
- */
-
 /* General Reset and Body Styling */
 * {
     margin: 0;
@@ -98,29 +7,8 @@ body::before {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: url('website_background.jpeg') no-repeat center center fixed;
-    background-size: cover; /* This makes sure the image covers the entire page */
-    color: #f1f1f1;
-    line-height: 1.6;
-    margin: 0;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-/* Rest of your existing CSS remains here... */
-
-
-/* General Reset and Body Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #121212);
-    color: #f1f1f1;
+    background: #f5f5f5; /* Light background */
+    color: #333; /* Darker text for contrast */
     line-height: 1.6;
     margin: 0;
     overflow-x: hidden;
@@ -129,48 +17,47 @@ body {
 
 /* Header Styling */
 header {
-    background: rgba(30, 30, 30, 0.95);
+    background: #ffffff; /* White background */
     padding: 20px;
     text-align: center;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 5px;
 }
 
 header p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-top: 5px;
 }
 
 /* Navigation Bar Styling */
 nav {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: rgba(51, 51, 51, 0.9);
+    background: #e3f2fd; /* Soft blue background */
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
-    color: #f1f1f1;
+    color: #333;
     padding: 12px 20px;
     text-decoration: none;
     margin: 0 10px;
     border-radius: 5px;
     font-weight: 500;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 nav a:hover {
-    background: #4CAF50;
-    transform: scale(1.1);
+    background: #bbdefb; /* Light blue hover background */
+    transform: scale(1.05);
 }
 
 /* Section Styling */
@@ -178,31 +65,82 @@ section {
     padding: 60px 20px;
     margin: 40px auto;
     max-width: 1000px;
-    background: rgba(30, 30, 30, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    transition: transform 0.5s, opacity 0.5s;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-section.visible {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-/* Section Headings */
-h2 {
-    color: #4CAF50;
+section h2 {
+    color: #1e88e5; /* Blue accent for headers */
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-/* Light effect */
+/* Contact Buttons Styling */
+.contact-buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    background: #1e88e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #1565c0;
+}
+
+/* Experience Section Styling */
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.experience-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.experience-card p {
+    margin-bottom: 15px;
+}
+
+/* Iframe Styling */
+iframe {
+    border: none;
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
+}
+
+/* Light effect - optional for extra interactivity */
 .light {
     position: fixed;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0));
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0));
     pointer-events: none;
     z-index: 1;
     mix-blend-mode: screen;
@@ -210,7 +148,7 @@ h2 {
 }
 
 /* Media Query for Responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     nav {
         flex-direction: column;
     }
@@ -220,6 +158,10 @@ h2 {
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 30px 15px;
     }
 }
