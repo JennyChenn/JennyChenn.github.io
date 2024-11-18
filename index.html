@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
@@ -59,16 +61,15 @@
 </section>
 
 <script>
-    // Light effect - Add if needed for additional interactivity
-    document.addEventListener('mousemove', function(e) {
+    document.addEventListener('mousemove', function (e) {
         let light = document.querySelector('.light');
         if (!light) {
             light = document.createElement('div');
             light.classList.add('light');
             document.body.appendChild(light);
         }
-        light.style.left = e.pageX + 'px';
-        light.style.top = e.pageY + 'px';
+        light.style.left = e.pageX - 40 + 'px';
+        light.style.top = e.pageY - 40 + 'px';
     });
 </script>
 
