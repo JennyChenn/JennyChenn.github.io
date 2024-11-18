@@ -134,17 +134,16 @@ iframe {
     margin-top: 20px;
 }
 
-/* Light effect - optional for extra interactivity */
+/* Light effect - Background Light */
 .light {
     position: fixed;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0));
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.2), rgba(255, 255, 0, 0));
     pointer-events: none;
     z-index: 1;
-    mix-blend-mode: screen;
-    transition: all 0.1s;
+    transition: transform 0.1s;
 }
 
 /* Media Query for Responsiveness */
