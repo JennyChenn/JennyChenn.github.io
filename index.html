@@ -1,14 +1,15 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenny Chen's Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
+<header id="main-header">
     <h1>Jenny Chen</h1>
     <p>Software Engineer | Data Analyst | AI Enthusiast</p>
 </header>
@@ -40,75 +41,12 @@
     </ul>
 </section>
 
-<!-- JavaScript for the lights effect -->
+<!-- JavaScript for light effect and header navigation -->
 <script>
+    // Light effect
     document.addEventListener('mousemove', function(e) {
         let light = document.querySelector('.light');
-        light.style.left = e.pageX + 'px';
-        light.style.top = e.pageY + 'px';
-    });
-
-    // Create and append the light element
-    let lightElement = document.createElement('div');
-    lightElement.classList.add('light');
-    document.body.appendChild(lightElement);
-</script>
-
-</body>
-</html>
- -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenny Chen's Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linking the external CSS file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- For animations -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<header>
-    <h1>Jenny Chen</h1>
-    <p>Software Engineer | Data Analyst | AI Enthusiast</p>
-</header>
-
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#resume">Resume</a>
-    <a href="#experience">Experience</a>
-</nav>
-
-<section id="about" class="animate__animated">
-    <h2>About Me</h2>
-    <p>Hello! I’m Jenny, a senior at Cornell University studying Computer Science and Business. I’m passionate about AI, robotics, and solving large-scale technical challenges. I’ve developed AI-driven solutions, trained machine learning models, and contributed to impactful projects during my internships and coursework.</p>
-</section>
-
-<section id="resume" class="animate__animated">
-    <h2>Resume</h2>
-    <iframe src="https://docs.google.com/document/d/1b_L7cd2xogikAbIT9py6SDUgYkY1VsBq/export?format=pdf&ouid=102581431009070678054&rtpof=true&sd=true" width="100%" height="600px">
-        This browser does not support PDFs. Please <a href="https://docs.google.com/document/d/1b_L7cd2xogikAbIT9py6SDUgYkY1VsBq/export?format=pdf&ouid=102581431009070678054&rtpof=true&sd=true" target="_blank">download the PDF</a> to view it.
-    </iframe>
-</section>
-
-<section id="experience" class="animate__animated">
-    <h2>Experience</h2>
-    <ul>
-        <li><strong>AI Chatbot Development (Internship)</strong>: Built a GenAI ChatBot, improving response accuracy and reducing costs.</li>
-        <li><strong>Cornell University (Robotics TA)</strong>: Supported interdisciplinary robotics courses covering kinematics, motion planning, and control systems.</li>
-        <li><strong>M&A Projects</strong>: Built models for streamlining processes and saving operational fees.</li>
-    </ul>
-</section>
-
-<!-- JavaScript for scrolling and light effects -->
-<script>
-    document.addEventListener('mousemove', function(e) {
-        let light = document.querySelector('.light');
-        light.style.left = e.pageX + 'px';
-        light.style.top = e.pageY + 'px';
+        light.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
     });
 
     // Create and append the light element
@@ -116,18 +54,11 @@
     lightElement.classList.add('light');
     document.body.appendChild(lightElement);
 
-    // Add animation on scroll
-    const sections = document.querySelectorAll('section');
-    window.addEventListener('scroll', function() {
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
-                section.classList.add('visible');
-            }
-        });
+    // Header click behavior for changing pages
+    document.getElementById('main-header').addEventListener('click', function() {
+        window.location.href = 'anotherPage.html'; // Replace with the actual page URL you want to navigate to
     });
 </script>
 
 </body>
 </html>
-
